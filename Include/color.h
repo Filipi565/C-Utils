@@ -1,6 +1,10 @@
 #ifndef _COLOR_H
 #define _COLOR_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 char* __color(int);
 
 #define RESET __color(0)
@@ -11,5 +15,9 @@ char* __color(int);
 #define CYAN __color(5)
 
 void setcolor(const char*);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif

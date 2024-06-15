@@ -17,7 +17,15 @@ typedef struct __path
     char* (*join) (const int, char*, ...);
 } __path;
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 __path __new_path();
+
+#ifdef __cplusplus
+}
+#endif
 
 #define path __new_path()
 

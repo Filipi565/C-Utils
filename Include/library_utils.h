@@ -1,6 +1,10 @@
 #ifndef _LIBRARY_UTILS_H
 #define _LIBRARY_UTILS_H
 
+#ifdef __cplusplus
+extern "C" {
+#endif
+
 #ifdef _WIN32
  #include <windows.h>
  typedef HINSTANCE Library;
@@ -16,5 +20,9 @@
 
 Library load_library(char []);
 int unload_library(Library);
+
+#ifdef __cplusplus
+}
+#endif
 
 #endif // _LIBRARY_UTILS_H
