@@ -12,6 +12,10 @@ int string_reverse(char* _Buffer, size_t _SizeInBytes, const char* _Source)
 
     char* result = (char*)malloc(string_length+1);
 
+    if (result == NULL){
+        return 1;
+    }
+
     int i1 = 0;
     int i2 = string_length-1;
 
