@@ -1,25 +1,27 @@
-#ifndef _PATH_H
-#define _PATH_H
+#ifndef _PATH_H_
+#define _PATH_H_
 
-#include <bool.h>
+#pragma once
 
-typedef struct __path
+#ifdef __cplusplus
+extern "C" {
+#endif // __cplusplus
+
+#include <stdlib.h>
+#include "bool.h"
+
+typedef struct path
 {
-    const char* sep;
-    const char* altsep;
+	const char* sep;
+	const char* altsep;
 
-    char* (*getcwd) ();
     int (*chdir) (const char*);
     int (*mkdir) (const char*);
     int (*rmdir) (const char*);
     bool (*exists) (const char*);
-    char* (*dirname) (const char*);
-    char* (*join) (const int, char*, ...);
+    int (*getcwd) (char* _Buffer, size_t _SizeInBytes);
+    int (*join) (char* _Buffer, size_t _SizeInBytes, ...);
 } __path;
-
-#ifdef __cplusplus
-extern "C" {
-#endif
 
 __path __new_path();
 
