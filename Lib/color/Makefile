@@ -8,7 +8,7 @@ else
 	OPTIONCHAR = -
 endif
 
-CFLAGS = $(OPTIONCHAR)I./../include $(OPTIONCHAR)c
+CFLAGS = $(OPTIONCHAR)I../../include $(OPTIONCHAR)c
 
 final: helper.o setcolor.o
 	@ar rs ../color.a helper.o setcolor.o
