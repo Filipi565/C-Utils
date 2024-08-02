@@ -14,7 +14,7 @@ bool string_endswith(const char* __string, const char* __value)
     r2 = (char*)malloc(lenght2);
 
     if (r1 == NULL || r2 == NULL){
-        return 1;
+        return -1;
     }
 
     string_reverse(r1, lenght1, __string);
