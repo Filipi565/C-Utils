@@ -2,5 +2,5 @@
 
 void setcolor(const char* __Color)
 {
-    printf(__Color);
+    printf("%s", __Color);
 }
