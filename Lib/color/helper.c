@@ -1,3 +1,5 @@
+#include "pch.h"
+
 char* __color(int __x)
 {
     switch (__x)
