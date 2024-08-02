@@ -1,4 +1,4 @@
-#include <stdio.h>
+#include "pch.h"
 
 void setcolor(const char* __Color)
 {
