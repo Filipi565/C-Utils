@@ -8,7 +8,7 @@ else
 	OPTIONCHAR = -
 endif
 
-CFLAGS = $(OPTIONCHAR)I../../include $(OPTIONCHAR)c
+CFLAGS = $(OPTIONCHAR)I../../Include $(OPTIONCHAR)c
 
 final: endswith.o reverse.o startswith.o
 	@ar rs ../strings_utils.a endswith.o reverse.o startswith.o

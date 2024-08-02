@@ -8,7 +8,7 @@ else
 	OPTIONCHAR = -
 endif
 
-CFLAGS = $(OPTIONCHAR)I../../include $(OPTIONCHAR)c
+CFLAGS = $(OPTIONCHAR)I../../Include $(OPTIONCHAR)c
 
 final: cwd.o dirs.o exists.o join.o path_struct.o
 	@ar rs ../path.a cwd.o dirs.o exists.o join.o path_struct.o
