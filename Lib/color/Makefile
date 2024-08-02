@@ -18,7 +18,7 @@ all: final clean
 helper.o:
 	@$(COMPILER) $(CFLAGS) helper.c $(OPTIONCHAR)c helper.o
 
-setcolor.o:
+setcolor.o: 
 	@$(COMPILER) $(CFLAGS) setcolor.c $(OPTIONCHAR)c setcolor.o
 
 clean:
