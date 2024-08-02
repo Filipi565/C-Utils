@@ -1,5 +1,7 @@
-#ifndef _COLOR_H
-#define _COLOR_H
+#ifndef _COLOR_H_
+#define _COLOR_H_
+
+#pragma once
 
 #ifdef __cplusplus
 extern "C" {
