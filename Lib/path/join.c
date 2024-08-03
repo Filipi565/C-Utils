@@ -34,7 +34,7 @@ bool _string_startswith(const char* __string, const char* __value)
 char* _string_reverse(const char* __string)
 {
     int string_length = strlen(__string);
-    char* result = (char*)malloc(string_length+1);
+    char* result = (char*)malloc((string_length+1)*sizeof(char));
 
     int i1 = 0;
     int i2 = string_length-1;
@@ -66,12 +66,12 @@ char* __path_join_verify_path(const char* _Path)
     if (!(_string_endswith(_Path, path.sep) || _string_endswith(_Path, path.altsep))){
         size_t lenght = strlen(_Path)+2; // +2 to the path.sep and the null char
         
-        char* _New = (char*)malloc(lenght);
+        char* _New = (char*)malloc(lenght*sizeof(char));
         strcpy1(_New, lenght, _Path);
         strcat1(_New, lenght, path.sep);
         return _New;
     } else {
-        char* _New = (char*)malloc(strlen(_Path)+1);
+        char* _New = (char*)malloc((strlen(_Path)+1)*sizeof(char));
         strcpy1(_New, strlen(_Path)+1, _Path);
         return _New;
     }
@@ -79,7 +79,7 @@ char* __path_join_verify_path(const char* _Path)
 
 char* __path_join_real_arg(const char* _Arg)
 {
-    char* _New = (char*)malloc(strlen(_Arg)+1);
+    char* _New = (char*)malloc((strlen(_Arg)+1)*sizeof(char));
     strcpy1(_New, strlen(_Arg)+1, _Arg);
     if (_string_endswith(_Arg, path.sep) || _string_endswith(_Arg, path.altsep)){
         _New[strlen(_Arg)] = '\0';
@@ -119,7 +119,7 @@ int __path_join(char* _Buffer, size_t _SizeInBytes, ...)
 
     va_end(args);
 
-    _Path = (char*)malloc(lenght);
+    _Path = (char*)malloc(lenght*sizeof(char));
     strcpy1(_Path, lenght, _First);
     free(_First);
 
