@@ -10,8 +10,8 @@ bool string_endswith(const char* __string, const char* __value)
     lenght1 = strlen(__string)+1;
     lenght2 = strlen(__value)+1;
 
-    r1 = (char*)malloc(lenght1);
-    r2 = (char*)malloc(lenght2);
+    r1 = (char*)malloc(lenght1*sizeof(char));
+    r2 = (char*)malloc(lenght2*sizeof(char));
 
     if (r1 == NULL || r2 == NULL){
         return -1;
