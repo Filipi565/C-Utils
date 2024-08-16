@@ -7,7 +7,7 @@
 extern "C" {
 #endif // __cplusplus
 
-#include <stdlib.h>
+#include <stddef.h>
 #include "bool.h"
 
 typedef struct path
