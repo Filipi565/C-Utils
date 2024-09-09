@@ -9,7 +9,7 @@ so this file is necessary
 #ifndef __cplusplus
 
 #ifndef bool
-typedef char bool;
+typedef unsigned char bool;
 #define bool bool
 #endif
 
