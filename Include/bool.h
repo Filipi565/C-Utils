@@ -5,10 +5,8 @@
 typedef unsigned char bool;
 #define bool bool
 
-const bool false = '\0';
-#define false false
+#define false 0
 
-const bool true = !false;
-#define true true
+#define true 1
 
 #endif
